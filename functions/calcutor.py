@@ -50,7 +50,7 @@ print("'po' for square")
 print("'sq' for square root")
 print("'mod' for modulas")
 print("'flo' for floor division")
-op = input("enter any of one of the given operations:")
+op = input("enter any of one of the given operations:").strip().lower()
 
 if op =='+' :
     add(a,b)
