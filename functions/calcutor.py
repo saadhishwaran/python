@@ -2,41 +2,41 @@ import math
 
 def add(a,b):
     c = a+b
-    print(c)
+    print("the result is: ",c)
 
 def sub(a,b):
     c = a-b
-    print(c)
+    print("the result is: "c)
 
 def multi(a,b):
     c = a*b 
-    print(c)
+    print("the result is: " ,c)
 
 def divid(a,b):
     if b == 0:
         print('division noy possible')
     else:
         c = a/b
-        print(c)
+        print("the result is:",c)
 
 def power(a,b):
     c = a**b
-    print(c)
+    print("the result is: ",c)
 
 def root(a,b):
     if a < 0:
         print('can not find root of negative no')
     else:
         c = math.sqrt(a)
-        print(c)
+        print("the result is:",c)
 
 def modulas(a,b):
     c = a%b
-    print(c)
+    print("the result is: ",c)
 
 def floor(a,b):
     c = a//b
-    print(c)
+    print("the result is: ",c)
 
 a = int(input("enter a: "))
 b = int(input('enter b: '))
