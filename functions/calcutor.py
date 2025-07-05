@@ -24,8 +24,11 @@ def power(a,b):
     print(c)
 
 def root(a,b):
-    c = math.sqrt(a)
-    print(c)
+    if a < 0:
+        print('can not find root of negative no')
+    else:
+        c = math.sqrt(a)
+        print(c)
 
 def modulas(a,b):
     c = a%b
