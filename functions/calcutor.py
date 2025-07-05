@@ -41,7 +41,16 @@ def floor(a,b):
 a = int(input("enter a: "))
 b = int(input('enter b: '))
 c = 0
-op = input("enter any of one op = '+','-','*','/','po','sq','mod','flo'")
+print("the given operations are:")
+print("'+'  for addition")
+print("'-'  for subtraction")
+print("'×'  for multiplication")
+print("'/'  for division")
+print("'po' for square")
+print("'sq' for square root")
+print("'mod' for modulas")
+print("'flo' for floor division")
+op = input("enter any of one of the given operations:")
 
 if op =='+' :
     add(a,b)
