@@ -24,7 +24,7 @@ def power(a,b):
     print("the result is: ",c)
 
 def root(a,b):
-    if a < 0:
+    if a < 1:
         print('can not find root of negative no')
     else:
         c = math.sqrt(a)
