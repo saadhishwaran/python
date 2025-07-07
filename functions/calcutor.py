@@ -14,7 +14,7 @@ def multi(a,b):
 
 def divid(a,b):
     if b < 1:
-        print('division noy possible')
+        print('division not possible')
     else:
         c = a/b
         print("the result is:",c)
