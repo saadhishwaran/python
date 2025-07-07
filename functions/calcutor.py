@@ -13,7 +13,7 @@ def multi(a,b):
     print("the result is: " ,c)
 
 def divid(a,b):
-    if b == 0:
+    if b < 1:
         print('division noy possible')
     else:
         c = a/b
