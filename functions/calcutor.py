@@ -1,8 +1,8 @@
 import math
 
 def add(a,b):
-    c = a+b
-    print(c)
+    print(f'adding:{a}+{b}')
+    return a+b
 
 def sub(a,b):
     c = a-b
@@ -41,9 +41,9 @@ c = 0
 op = input("enter any of one op = '+','-','*','/','po','sq','mod','flo'")
 
 if op =='+' :
-    add(a,b)
+    print(add(a,b))
 elif op == '-' :
-    sub(a,b)
+    print(sub(a,b))
 elif op == '*' :
     multi(a,b)
 elif op == '/' :
