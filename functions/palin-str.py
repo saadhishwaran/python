@@ -7,7 +7,7 @@ is_palin = True
 for i in range(length // 2):
     if s[i] != s[length - 1 - i]:
         is_palin = False
-        break
+        break  
 
 if is_palin:
     print(f'{a} is a palindrome.')
