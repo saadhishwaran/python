@@ -1,0 +1,5 @@
+print("to update the details enter:'update'")
+print("to push the value enter:'creat'")
+print("to search the particular element:'search'")
+print("to get all the values:'display'")
+op = input("enter any one of the given operation: ")
