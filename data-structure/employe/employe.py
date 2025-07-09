@@ -10,4 +10,6 @@ def search():
 def display():
     print('ohhhh')
 
+List1 = [{'name':'','salary':00,'position':''},{'name':'','salary':00,'position':''}]
+
 print("____x____X____x____")
