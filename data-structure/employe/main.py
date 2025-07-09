@@ -1,4 +1,4 @@
-import employe
+
 
 print("to know specific value enter: 'key'")
 print("to know both keys and values enter: 'items'")
