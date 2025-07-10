@@ -22,9 +22,11 @@ def update():
 
 def search():
     print('uhhhh')
+    
 
 def display():
-    print('ohhhhh')
+    print(List1[0])
+    print(List1[1])
 
 List1 = [{'name':'aadthiya','age':30,'salary':100000.0,'position':'regional maneger'},{'name':'gokul','age':20,'salary':20000000.0,'position':'chief excecutive officer'}]
 list2 = []
