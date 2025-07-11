@@ -25,7 +25,7 @@ def update():
 def search():
     s = input('enter the element to be found: ')
     r = []
-    for d in list2:
+    for d in List1:
         if d.get('name') == s :
             r.append(d)
     print(r)
