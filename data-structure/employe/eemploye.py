@@ -22,6 +22,9 @@ def update():
 
 def search():
     print('uhhhh')
+    i = int(input('enter the dictnaory no: '))
+    j = int(input('enter the idex no: '))
+    
     
 
 def display():
