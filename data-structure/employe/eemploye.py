@@ -1,30 +1,34 @@
-def create():
+def create(): 
     dict1 = {}
-    name = input('enter eemploye name: ')
-    age = int(input('enter eemploy age: '))
-    salary = float(input('enter eemploye salary: '))
-    postition = input('enter eemploye position: ')
-    dict1.update({'name':name,'age':age,'salary':salary,'position':postition})
-    list2.append(dict1)
+    n = int(input('enter the no: '))
+    for i in range(n):
+        name = input('enter the keys: ')
+        age = int(input('enter the values'))
+        salary = float(input('enter eemploye salary: '))
+        postition = input('enter eemploye position: ')
+        dict1.update({'name':name,'age':age,'salary':salary,'position':postition})
+        list2.append(dict1)
     print(dict1)
-    print(list2)
 
 def update():
     dict1 = {}
-    name = input('enter eemploye name: ')
-    age = int(input('enter eemploy age: '))
-    salary = float(input('enter eemploye salary: '))
-    postition = input('enter eemploye position: ')
-    dict1.update({'name':name,'age':age,'salary':salary,'position':postition})
-    list2.append(dict1)
-    print(dict1)
-    print(list2)
-
-def search():
-    print('uhhhh')
-    i = int(input('enter the dictnaory no: '))
-    j = int(input('enter the idex no: '))
+    n = int(input('enter the no: '))
+    for i in range(n):
+        name = input('enter the keys: ')
+        age = int(input('enter the values'))
+        salary = float(input('enter eemploye salary: '))
+        postition = input('enter eemploye position: ')
+        dict1.update({'name':name,'age':age,'salary':salary,'position':postition})
+        list2.append(dict1)
+    print(dict1)  
     
+def search():
+    s = input('enter the element to be found: ')
+    r = []
+    for d in List1:
+        if d.get('name') == s :
+            r.append(d)
+    print(r)
     
 
 def display():
