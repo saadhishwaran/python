@@ -29,7 +29,6 @@ def search():
         if d.get('name') == s :
             r.append(d)
     print(r)
-    
 
 def display():
     print(list1[0])
