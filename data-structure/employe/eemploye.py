@@ -22,7 +22,7 @@ def update():
         list2.append(dict1)
     print(dict1)  
     
-def search(List1):
+def search():
     s = input('enter the element to be found: ')
     r = []
     for d in List1:
