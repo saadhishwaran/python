@@ -1,0 +1,2 @@
+list1 = [{'name':'jhon','expirence':3,'salary':1000,'position':'typewriter','perso_det':{'age':30,'father':'lim','mother':'ken','mariage_stat':'no','city':'washington'}},{'name':'jhony','expirence':4,'salary':3000,'position':'clearck','perso_det':{'age':31,'father':'liam','mother':'rose','mariage_stat':'yes','city':'newrorck'}}]
+print(list1)
