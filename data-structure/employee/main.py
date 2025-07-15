@@ -1,4 +1,4 @@
-import eemploye
+import employee
 
 print("to update the details enter:'create'")
 print("to push the value enter:'update'")
@@ -9,14 +9,14 @@ print("to delete the values enter: 'delete'")
 op = input("enter any one of the given operation: ").strip().lower()
 
 if op == 'create':
-    eemploye.create()
+    employee.create()
 elif op == 'update':
-    eemploye.update()
+    employee.update()
 elif op == 'search':
-    eemploye.search()
+    employee.search()
 elif op == 'display':
-    eemploye.display()
+    employee.display()
 elif op == 'delete':
-    eemploye.delete()
+    employee.delete()
 else:
     print('invalid operator given:')
