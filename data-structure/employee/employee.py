@@ -11,15 +11,14 @@ def create():
     print(list1)
 
 def update():
-    dict1 = {}
+    list1.clear()
     n = int(input('enter the no: '))
     for i in range(n):
         name = input('enter the name: ')
         age = int(input('enter the age: '))
         salary = float(input('enter eemploye salary: '))
         postition = input('enter eemploye position: ')
-        dict1.update({'name':name,'age':age,'salary':salary,'position':postition})
-        list1.append(dict1)
+        list1.append({'name':name,'age':age,'salary':salary,'position':postition})
     print(list1)  
     
 def search():
