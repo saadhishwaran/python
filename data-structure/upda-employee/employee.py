@@ -30,11 +30,43 @@ def update():
     print(list1)
 
 def search():
-    s = input('enter the username to be found: ')
+    s = input('enter what are you going to use to search: ')
     r = []
-    for d in list1:
-        if d.get('name') == s :
-            r.append(d)
+    if s == 'name':
+        a = input('enter the empolyee name: ')
+        for d in list1: 
+            if d.get('name') == a:
+                r.append(d)
+            else:
+                print('not found;')
+    if s == 'position':
+        a = input('enter the empolyee position: ')
+        for d in list1:
+            if d.get('position') == a:
+                r.append(d)
+            else:
+                print('not found')
+    if s == 'age':
+        a = int(input('enter the age range:'))
+        for d in list1:
+            if d.get('age') == a:
+                r.append(d)
+            else:
+                print('not found')
+    if s == 'experience':
+        a = int(input('enter the experience: '))
+        for d in list1:
+            if d.get('experience') == a:
+                r.append(d)
+            else:
+                print('not found')
+    if s == 'salary':
+        q = float(input('enter the salary: '))
+        for d in list1:
+            if d.get('salary') == q:
+                r.append(d)
+            else:
+                print('not found')
     print(r)
 
 def display():
