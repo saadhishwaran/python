@@ -2,33 +2,31 @@ def create():
     n = int(input('enter the no: '))
     for i in range(n):
         name = input('enter the name: ')
-        expirence = int(input('enter the expirence: '))
+        experience = int(input('enter the expirence: '))
         salary = float(input('enter eemploye salary: '))
         postition = input('enter eemploye position: ')
         age = int(input('enter the age: '))
         father = input('enter father name: ')
         mother = input('enter mother name: ')
-        mariage = input('enter yes if mariaged, no if not:')
+        marriage = input('enter yes if marriaged, no if not:')
         city = input('enter the cty: ')
-        list1.append({'name':name,'expirence':expirence,'salary':salary,'position':postition,'perso-info':{'age':age,'father':father,'mother':mother,'mariage-stat':mariage,'city':city}})
+        list1.append({'name':name,'experience':experience,'salary':salary,'position':postition,'perso-info':{'age':age,'father':father,'mother':mother,'marriage-stat':marriage,'city':city}})
     print(list1)
 
-
-
 def update():
-    list1.clear()
-    n = int(input('enter the no: '))
-    for i in range(n):
-        name = input('enter the name: ')
-        expirence = int(input('enter the expirence: '))
-        salary = float(input('enter eemploye salary: '))
-        postition = input('enter eemploye position: ')
-        age = int(input('enter the age: '))
-        father = input('enter father name: ')
-        mother = input('enter mother name: ')
-        mariage = input('enter yes if mariaged, no if not:')
-        city = input('enter the cty: ')
-        list1.append({'name':name,'expirence':expirence,'salary':salary,'position':postition,'perso-info':{'age':age,'father':father,'mother':mother,'mariage-stat':mariage,'city':city}})
+    name = input('enter the name to be updated: ')
+    for i in list1:
+        if i['name'].lower() == name.lower():
+            i['experience'] = int(input('enter the new experience: '))
+            i['salary'] = float(input('enter the salary: '))
+            i['position'] = input('enter the position: ')
+            i['perso_info']['age'] = int(input('enter the age: '))
+            i['perso_info']['fatner'] = input('enter the father name: ')
+            i['perso_info']['mother'] = input('enter the mother name: ')
+            i['perso_info']['marriage-stat'] = input('enter marriage status')
+            i['perso_info']['city'] = input('enter the home city: ')
+    else:
+        print('employee deatils must be created')        
     print(list1)
 
 def search():
@@ -51,5 +49,5 @@ def delete():
             list1.remove(d)
     print(list1)
 
-list1 = [{'name':'jhon','expirence':3,'salary':1000,'position':'typewriter','perso_info':{'age':30,'father':'lim','mother':'ken','mariage_stat':'no','city':'washington'}},{'name':'jhony','expirence':4,'salary':3000,'position':'clearck','perso_info':{'age':31,'father':'liam','mother':'rose','mariage_stat':'yes','city':'newrorck'}}]
+list1 = [{'name':'jhon','experience':3,'salary':1000,'position':'typewriter','perso_info':{'age':30,'father':'lim','mother':'ken','marsiage_stat':'no','city':'washington'}},{'name':'jhony','experience':4,'salary':3000,'position':'clearck','perso_info':{'age':31,'father':'liam','mother':'rose','marriage_stat':'yes','city':'newrorck'}}]
 print(list1)
