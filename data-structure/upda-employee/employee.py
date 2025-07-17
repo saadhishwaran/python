@@ -103,7 +103,6 @@ def search():
     print(r)
 
 def display():
-    # list1 = [{'name':'jhon','experience':3,'salary':1000,'position':'typewriter','perso_info':{'age':30,'father':'lim','mother':'ken','marsiage_stat':'no','city':'washington'}},{'name':'jhony','experience':4,'salary':3000,'position':'clearck','perso_info':{'age':31,'father':'liam','mother':'rose','marriage_stat':'yes','city':'newrorck'}}]
     print('name:',list1[0]['name'])
     print('experience:',list1[0]['experience'])
     print('salary:',list1[0]['salary'])
