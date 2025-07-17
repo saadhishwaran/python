@@ -37,36 +37,69 @@ def search():
         for d in list1: 
             if d.get('name') == a:
                 r.append(d)
-            else:
-                print('not found;')
+        else:
+            print('not found;')
     if s == 'position':
         a = input('enter the empolyee position: ')
         for d in list1:
             if d.get('position') == a:
                 r.append(d)
-            else:
-                print('not found')
+        else:
+            print('not found;')
     if s == 'age':
-        a = int(input('enter the age range:'))
-        for d in list1:
-            if d.get('age') == a:
-                r.append(d)
+        z = input('enter yes if range,and no if not: ')
+        if z == 'yes':
+            a = int(input('enter the min age range:'))
+            b = int(input('enter the max age range: '))
+            for d in list1:
+                if d['perso_info']['age'] > a:
+                    if d['perso_info']['age'] < b:
+                        r.append(d)
             else:
-                print('not found')
+                print('not found;')
+        else: 
+            a = int(input('enter the age: '))       
+            for d in list1:
+                if d['perso_info']['age'] == a:
+                    r.append(d)
+            else:
+                print('not found;')
     if s == 'experience':
-        a = int(input('enter the experience: '))
-        for d in list1:
-            if d.get('experience') == a:
-                r.append(d)
+        z = input('enter yes if range,and no if not: ')
+        if z == 'yes':
+            a = int(input('enter the min experience: '))
+            b = int(input('enter the max experience: '))
+            for d in list1:
+                if d['experience'] > a:
+                    if d['experience'] < b:
+                        r.append(d)
             else:
-                print('not found')
+                print('not found;')
+        else:
+            a = int(input('enter the experience: '))
+            for f in list1:
+                if f['experience'] == a:
+                    r.append(f)
+            else: 
+                print('not found;')
     if s == 'salary':
-        q = float(input('enter the salary: '))
-        for d in list1:
-            if d.get('salary') == q:
-                r.append(d)
+        z = input('enter yes if range,and no if not: ')
+        if z == 'yes':
+            a = float(input('enter the min salary: '))
+            b = float(input('enter the max salary: '))
+            for d in list1:
+                if d['salary'] > a:
+                    if d['salary'] < b:
+                        r.append(d)
             else:
-                print('not found')
+                print('not found;')
+        else:
+            q = float(input('enter the salary: '))
+            for d in list1:
+                if d.get('salary') == q:
+                    r.append(d)
+            else:
+                print('not found;')
     print(r)
 
 def display():
