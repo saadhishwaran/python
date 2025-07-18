@@ -103,23 +103,16 @@ def search():
     print(r)
 
 def display():
-    print('name:',list1[0]['name'])
-    print('experience:',list1[0]['experience'])
-    print('salary:',list1[0]['salary'])
-    print('position:',list1[0]['position'])
-    print('personal information>>age:',list1[0]['perso_info']['age'])
-    print('personal information>>father_name: ',list1[0]['perso_info']['father'])
-    print('presonal information>>mother_name: ',list1[0]['perso_info']['mother'])
-    print('presonal information>>city: ',list1[0]['perso_info']['city'])
-    print('___x___X___x')
-    print('name:',list1[1]['name'])
-    print('experience:',list1[1]['experience'])
-    print('salary:',list1[1]['salary'])
-    print('position:',list1[1]['position'])
-    print('personal information>>age:',list1[1]['perso_info']['age'])
-    print('personal information>>father_name: ',list1[1]['perso_info']['father'])
-    print('presonal information>>mother_name: ',list1[1]['perso_info']['mother'])
-    print('presonal information>>city: ',list1[1]['perso_info']['city'])
+    for i in list1:
+        print('name:',i['name'])
+        print('experience:',i['experience'])
+        print('salary:',i['salary'])
+        print('position:',i['position'])
+        print('personal information>>age:',i['perso_info']['age'])
+        print('personal information>>father_name: ',i['perso_info']['father'])
+        print('presonal information>>mother_name: ',i['perso_info']['mother'])
+        print('presonal information>>city: ',i['perso_info']['city'])
+        print('___x___X___x___')
 
 def delete():
     s = input('enter the username to delete: ')
