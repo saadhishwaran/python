@@ -1,5 +1,4 @@
 import random
-import string
 
 def generator(length):
     charr = name + ag 
