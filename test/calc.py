@@ -19,7 +19,10 @@ def multi():
 def divid():
     a = int(input('enter a: '))
     b = int(input('enter b: '))
-    c = a/b
+    if b == 0:
+        print('no division possible: ')
+    else:
+        c = a/b
     print(c)
 
 a = input("Enter any one operator = '+','-','*','/': ")
