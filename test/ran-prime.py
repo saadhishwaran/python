@@ -1,12 +1,20 @@
-a = int(input('enter the no: '))
-b = []
-c = []
+import math
 
-for i in range(1,a+1):
-    for j in range(1,i+1):
-        if i%j != 0:
-            c.append(j)
-    else:
-        b.append(a)
-print(c)
-print(b)
+def is_prime(n):
+    if n <= 1:
+        return False
+    elif n>1 :
+        for i in range(2,int(math.sqrt(n+1))):
+            if n%i == 0:
+                return False
+        return True                            
+
+def lis_prime(a):
+    list1 = []
+    for i in range(2,a+1):
+        if is_prime(i):
+            list1.append(i)
+    print(list1)
+
+a = int(input('enter tne no: '))
+lis_prime(a)
