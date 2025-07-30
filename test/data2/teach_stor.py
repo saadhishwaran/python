@@ -38,28 +38,40 @@ def update():
     name = input('enter the name to be updated: ')
     for i in list1:
         if i['name'].lower() == name.lower():
-            i['age'] = int(input('enter the student age : '))
-            i['course'] = input('enter the students course: ')
-            i['exam']['sem'] = int(input('enter the semester: '))
-            i['exam']['sem']['subjects']['sub'] = input('enter the first subject: ')
-            i['exam']['sem']['subjects']['marks'] = int(input('enter the first mark: '))
-            i['exam']['sem']['subjects']['sub'] = input('enter the second subject: ')
-            i['exam']['sem']['subjects']['marks'] = int(input('enter the second mark: '))
-            i['exam']['sem']['subjects']['sub'] = input('enter the third subject: ')
-            i['exam']['sem']['subjects']['marks'] = int(input('enter the third mark: '))
-            i['exam']['sem']['subjects']['sub'] = input('enter the fourth subject: ')
-            i['exam']['sem']['subjects']['marks'] = int(input('enter the fourth mark: '))
-            i['exam']['sem']['subjects']['sub'] = input('enter the fifth subject: ')
-            i['exam']['sem']['subjects']['marks'] = int(input('enter the fifth mark: '))
-
+            i['age'] = int(input('enter the student age: '))
+            i['course'] = input("enter the student's course: ")
+            seme = int(input('enter the semester => 0(1) or 1(2) or 2(3):  ')) - 1
+            if 0 <= seme < len(i['exam']):
+                subj = i['exam'][seme]['subjects']
+                for j in range(len(subj)):
+                    sub = input('enter the sub: ')
+                    marks = int(input('enter the marks: '))
+                    if j < len(subj):
+                        subj[j] = {'sub': sub, 'marks': marks}
+                    else:
+                        subj.append({'sub': sub, 'marks': marks})
+            else:
+                print("Invalid semester number.")
+            print(list1)
+    else:
+        print('student not found: ')
+ 
 def search():
-    print('aaaa')
+    name = input('enter the name to be searched: ')
+    for i in list1:
+        if i['name'].lower() == name.lower():
+            print(i)
 
 def display():
-    print('aaaa')
+    for i in list1:
+        print(i)
 
 def delete():
-    print('aaaa')
+    name = input('enter the student to be removed: ')
+    for i in list1:
+        if i.get('name') == name.lower():
+            list1.remove(i)
+    print(list1)
 
 
 list1 = [
@@ -100,6 +112,47 @@ list1 = [
                     {'sub':'phys','marks':98},
                     {'sub':'maths','marks':96},
                     {'sub':'computer','marks':97}
+                ]
+            }
+        ]
+    },
+    {
+        'name':'aadhish',
+        'age':20,
+        'course':'ece',
+        'exam': 
+        [
+            {
+                'sem': 1 , 
+                'subjects': 
+                [
+                    {'sub':'eng', 'marks': 98},
+                    {'sub':'tam', 'marks': 99},
+                    {'sub':'phys','marks':89},
+                    {'sub':'maths','marks':96},
+                    {'sub':'computer','marks':95}
+                ],
+            },
+            {
+                'sem': 2 , 
+                'subjects':
+                [
+                    {'sub':'eng', 'marks': 88},
+                    {'sub':'tam', 'marks': 89},
+                    {'sub':'phys','marks':98},
+                    {'sub':'maths','marks':86},
+                    {'sub':'computer','marks':85}
+                ],
+            },
+            {
+                'sem': 3 ,
+                'subjects': 
+                [
+                    {'sub':'eng', 'marks': 90},
+                    {'sub':'tam', 'marks': 89},
+                    {'sub':'phys','marks':99},
+                    {'sub':'maths','marks':97},
+                    {'sub':'computer','marks':87}
                 ]
             }
         ]
