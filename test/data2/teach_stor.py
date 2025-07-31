@@ -50,8 +50,14 @@ def update():
                         subj[j] = {'sub': sub, 'marks': marks}
                     else:
                         subj.append({'sub': sub, 'marks': marks})
-            else:
-                print("Invalid semester number.")
+            elif 8 > seme == len(i['exam']):
+                list2 = []
+                subj = i['exam'][0]['subjects']
+                for j in range(len(subj)):
+                    sub = input('enter the sub: ')
+                    marks = int(input('enter the marks: '))
+                    list2.append({'sub': sub, 'marks': marks})
+                    list1.insert(len(subj),list2) 
             print(list1)
     else:
         print('student not found: ')
@@ -188,3 +194,4 @@ list1 = [
         ]
     }
 ]
+
