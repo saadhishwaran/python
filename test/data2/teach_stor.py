@@ -40,8 +40,8 @@ def update():
         if i['name'].lower() == name.lower():
             i['age'] = int(input('enter the student age: '))
             i['course'] = input("enter the student's course: ")
-            seme = int(input('enter the semester => 0(1) or 1(2) or 2(3):  ')) - 1
-            if 0 <= seme < len(i['exam']):
+            seme = int(input('enter the semester => 1 or 2 or 3:  ')) - 1
+            if  seme < len(i['exam']):
                 subj = i['exam'][seme]['subjects']
                 for j in range(len(subj)):
                     sub = input('enter the sub: ')
@@ -57,14 +57,44 @@ def update():
         print('student not found: ')
  
 def search():
-    name = input('enter the name to be searched: ')
-    for i in list1:
-        if i['name'].lower() == name.lower():
-            print(i)
+    list2 =[]
+    variable = input('enter on what to search: ')
+    if variable == 'name':
+        name = input('enter the name to search: ')
+        for i in list1: 
+            if i['name'] == name:
+                list2.append(i)
+                print(list2)
+            else:
+                print('not found: ')
+    elif variable == 'age':
+        age = int(input('enter the age to be found: '))
+        for i in list1:
+            if i['age'] == age:
+                list2.append(i)
+                print(list2) 
+            else:
+                print('not found: ')
+    elif variable == 'course':
+        course = input('enter the course to search: ')
+        for i in list1:
+            if i['course'] == course:
+                list2.append(i)
+                print(list2)
+            else:
+                print('not found: ')
+    else:
+        print('invalid cerdinals; ')
 
 def display():
     for i in list1:
-        print(i)
+        print('name:',i['name'])
+        print('age:',i['age'])
+        print('course:',i['course'])
+        for j in i['exam']:
+            print('sem:',j['sem'])
+            for k in j['subjects']:
+                print('subject:',k['sub'],'marks:',k['marks'])
 
 def delete():
     name = input('enter the student to be removed: ')
