@@ -32,7 +32,7 @@ def creat():
             ]
         }
     )
-    print(list1)
+    print(display())
 
 def update():
     name = input('enter the name to be updated: ')
@@ -51,14 +51,16 @@ def update():
                     else:
                         subj.append({'sub': sub, 'marks': marks})
             elif 8 > seme == len(i['exam']):
-                list2 = []
-                subj = i['exam'][0]['subjects']
-                for j in range(len(subj)):
-                    sub = input('enter the sub: ')
-                    marks = int(input('enter the marks: '))
-                    list2.append({'sub': sub, 'marks': marks})
-                    list1.insert(len(subj),list2) 
-            print(list1)
+                n = int(input('enter the no of semester to add: '))
+                for ij in range(n):
+                    list2 = []
+                    subj = i['exam'][0]['subjects']  
+                    for j in range(len(subj)):
+                        sub = input('Enter the subject: ')
+                        marks = int(input('Enter the marks: '))
+                        list2.append({'sub': sub, 'marks': marks})
+                    i['exam'].append({'sem': seme + ij + 1, 'subjects': list2})
+            print(display())
     else:
         print('student not found: ')
  
@@ -70,7 +72,7 @@ def search():
         for i in list1: 
             if i['name'] == name:
                 list2.append(i)
-                print(list2)
+                print(display())
             else:
                 print('not found: ')
     elif variable == 'age':
@@ -78,7 +80,7 @@ def search():
         for i in list1:
             if i['age'] == age:
                 list2.append(i)
-                print(list2) 
+                print(display()) 
             else:
                 print('not found: ')
     elif variable == 'course':
@@ -86,7 +88,7 @@ def search():
         for i in list1:
             if i['course'] == course:
                 list2.append(i)
-                print(list2)
+                print(display())
             else:
                 print('not found: ')
     else:
@@ -107,7 +109,7 @@ def delete():
     for i in list1:
         if i.get('name') == name.lower():
             list1.remove(i)
-    print(list1)
+    print(display())
 
 
 list1 = [
