@@ -35,34 +35,48 @@ def creat():
     print(display())
 
 def update():
-    name = input('enter the name to be updated: ')
-    for i in list1:
-        if i['name'].lower() == name.lower():
-            i['age'] = int(input('enter the student age: '))
-            i['course'] = input("enter the student's course: ")
-            seme = int(input('enter the semester => 1 or 2 or 3:  ')) - 1
-            if  seme < len(i['exam']):
-                subj = i['exam'][seme]['subjects']
-                for j in range(len(subj)):
-                    sub = input('enter the sub: ')
-                    marks = int(input('enter the marks: '))
-                    if j < len(subj):
-                        subj[j] = {'sub': sub, 'marks': marks}
-                    else:
-                        subj.append({'sub': sub, 'marks': marks})
-            elif 8 > seme == len(i['exam']):
-                n = int(input('enter the no of semester to add: '))
-                for ij in range(n):
-                    list2 = []
-                    subj = i['exam'][0]['subjects']  
+    list2 = []
+    confirm = input('enter yes to add new subject of no to not to add: ')
+    if confirm.lower() == 'no':
+        name = input('enter the name to be updated: ')
+        for i in list1:
+            if i['name'].lower() == name.lower():
+                i['age'] = int(input('enter the student age: '))
+                i['course'] = input("enter the student's course: ")
+                seme = int(input('enter the semester :  ')) - 1
+                if  seme < len(i['exam']):
+                    subj = i['exam'][seme]['subjects']
                     for j in range(len(subj)):
-                        sub = input('Enter the subject: ')
-                        marks = int(input('Enter the marks: '))
-                        list2.append({'sub': sub, 'marks': marks})
-                    i['exam'].append({'sem': seme + ij + 1, 'subjects': list2})
+                        sub = input('enter the sub: ')
+                        marks = int(input('enter the marks: '))
+                        if j < len(subj):
+                            subj[j] = {'sub': sub, 'marks': marks}
+                        else:
+                            subj.append({'sub': sub, 'marks': marks})
+                elif 8 > seme == len(i['exam']):
+                    n = int(input('enter the no of semester to add: '))
+                    for ij in range(n):
+                        subj = i['exam'][0]['subjects']  
+                        for j in range(len(subj)):
+                            sub = input('Enter the subject: ')
+                            marks = int(input('Enter the marks: '))
+                            list2.append({'sub': sub, 'marks': marks})
+                        i['exam'].append({'sem': seme + ij + 1, 'subjects': list2})
+                print(display())
+        else:
+            print('student not found: ')
+    else: 
+        na = input('enter the student to add subject: ')
+        for i in list1:
+            if i['name'] == na:
+                seme = int(input('enter the semester :  ')) - 1
+                if  seme < len(i['exam']):
+                    subj = int(input('enter the no of sub to add: '))
+                    for j in range(subj):
+                        sub = input('enter the new sub: ')
+                        marks = int(input("enter the new sub's marks: "))
+                        i['exam'][seme]['subjects'].append({'sub': sub, 'marks': marks})
             print(display())
-    else:
-        print('student not found: ')
  
 def search():
     list2 =[]
